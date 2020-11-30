@@ -1,7 +1,7 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import fetchData from "../utils/API";
+import { fetchData } from "../utils/api";
 import Loading from "./Loading";
 
 function renderUserInfo(item) {
@@ -34,12 +34,10 @@ function UserPage() {
   let [loadingStatus, setLoadingStatus] = useState(true);
 
   useEffect(() => {
-    fetchData(`/${id}`)
-      .then((data) => {
-        setUser(data);
-        setLoadingStatus(false);
-      })
-      .catch(console.log);
+    fetchData(`/${id}`).then((data) => {
+      setUser(data);
+      setLoadingStatus(false);
+    });
   }, []);
 
   return (

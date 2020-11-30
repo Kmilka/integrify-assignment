@@ -5,3 +5,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Deployed into [Netlify](https://www.netlify.com/)
+
+## TODO
+
+- add tests
+- cache responses

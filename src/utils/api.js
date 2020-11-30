@@ -8,7 +8,7 @@ const options = {
   headers,
 };
 
-async function fetchData(route) {
+export function fetchData(route) {
   return fetch(`${API}${route}`, options).then((res) => {
     if (res.ok) {
       return res.json();
@@ -17,5 +17,3 @@ async function fetchData(route) {
     }
   });
 }
-
-export default fetchData;
